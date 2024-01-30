@@ -64,7 +64,7 @@
               {{item.gender}}
             </td>
             <td class="bg-pink-50">
-              <UButton class="bg-blue-200" @click="openModal('edit', idx)">Edit</UButton>
+              <UButton class="bg-blue-200" @click="openModal('edit', idx)">Editt</UButton>
               <UButton class="bg-blue-200" @click="openModal('delete', idx)">Delete</UButton>
             </td>
           </tr>
@@ -94,7 +94,7 @@ const openModal = (type, index = null) => {
   operationIndex = index;
 
   if (type === 'add') {
-    formData.value = { name: '', age: 0, gender: '' };
+    formData.value = { name : '', age: 0, gender: '' };
   } else if (type === 'edit' && index !== null) {
     formData.value = { ...details.value[index] };
   }
